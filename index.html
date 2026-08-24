@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Fruit Slash</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+</head>
+
+<body>
+
+    <!-- Camera -->
+    <video id="camera" autoplay playsinline></video>
+
+    <!-- Game Canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Finger Cursor -->
+    <div id="finger"></div>
+
+    <!-- HUD -->
+    <div class="hud">
+
+        <div class="hud-box">
+            SCORE
+            <span id="score">0</span>
+        </div>
+
+        <div class="hud-box">
+            LIVES
+            <span id="lives">❤️❤️❤️</span>
+        </div>
+
+    </div>
+
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+
+        <div class="panel">
+
+            <div class="logo">🍉</div>
+
+            <h1>NEON FRUIT SLASH</h1>
+
+            <p>
+                Use your index finger like a sword.
+            </p>
+
+            <p>
+                🍎 Cut fruits &nbsp; | &nbsp;
+                💣 Avoid bombs
+            </p>
+
+            <button id="startBtn">
+                START GAME
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Game Over -->
+    <div id="gameOver" class="screen">
+
+        <div class="panel">
+
+            <div class="logo">💥</div>
+
+            <h1>GAME OVER</h1>
+
+            <p>
+                Final Score
+            </p>
+
+            <div id="finalScore">
+                0
+            </div>
+
+            <button id="restartBtn">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
